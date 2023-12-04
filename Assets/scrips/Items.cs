@@ -1,18 +1,18 @@
-using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
+using UnityEngine; // Asegúrate de tener esta directiva
 
-public class Items : MonoBehaviour
+public class GameLogic : MonoBehaviour
 {
-    // Start is called before the first frame update
+    MiLista miLista = new MiLista();
+
     void Start()
     {
-        
-    }
+        GameObject obj1 = GameObject.Find("Object1");
+        GameObject obj2 = GameObject.Find("Object2");
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        miLista.AgregarAlFinal(obj1);
+        miLista.AgregarAlFinal(obj2);
+
+        miLista.MostrarGameObjects();
     }
 }
