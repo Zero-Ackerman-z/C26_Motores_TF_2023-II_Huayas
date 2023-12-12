@@ -4,20 +4,21 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 public class MovemetController : MonoBehaviour
 {
+
     Vector2 playerInput;
-    float moveSpeed;
-    public float WalkSpeed;
+    public float moveSpeed;
+    private Rigidbody rb;
+    GameObject playerParent;
+    public float walkSpeed;
     public float runSpeed;
-    // Start is called before the first frame update
+
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody>();
+
+       
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    // Resto del código sigue igual...
 }
+
